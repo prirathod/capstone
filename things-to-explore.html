@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Explore at MacEwan - MacEwan University Immigration Services</title>
+    <link rel="stylesheet" href="styles.css"><head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    </head>
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">MacEwan University</a>
+            <div class="menu">
+                <a href="pre-arrival.html" class="nav-link">Pre-Arrival</a>
+                <a href="post-arrival.html" class="nav-link">Post-Arrival</a>
+                <a href="student-experience.html" class="nav-link">Student Testimonial</a>
+                <a href="things-to-explore.html" class="nav-link">Things to Explore</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Things to Explore Content -->
+    <section class="section"><script>
+        var map = L.map('map').setView([53.5232, -113.5263], 17); // Coordinates for MacEwan University
+    
+        // Tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    
+        // University boundary highlight (change coordinates accordingly for accuracy)
+        var universityArea = L.polygon([
+            [53.5232, -113.5280], // Top-left corner
+            [53.5227, -113.5230], // Bottom-left corner
+            [53.5245, -113.5200], // Bottom-right corner
+            [53.5240, -113.5260]  // Top-right corner
+        ], {color: 'green', fillColor: '#9fdf9f', fillOpacity: 0.2}).addTo(map);
+    
+        // Places within the university with red markers
+        var places = [
+            {lat: 53.5235, lon: -113.5265, name: "Clock Tower"},
+            {lat: 53.5240, lon: -113.5250, name: "Flag Pole"},
+            {lat: 53.5225, lon: -113.5240, name: "Sustainability Projects"},
+            {lat: 53.5230, lon: -113.5225, name: "Indigenous Center"},
+            {lat: 53.5232, lon: -113.5215, name: "Sports Complex"},
+            {lat: 53.5236, lon: -113.5230, name: "Art Gallery"}
+        ];
+    
+        // Add red markers for each place
+        places.forEach(function(place) {
+            L.marker([place.lat, place.lon], {icon: L.icon({iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png', iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowAnchor: [10, 12]})})
+                .bindPopup("<strong>" + place.name + "</strong>")
+                .addTo(map);
+        });
+    </script>
+    
+        <h2>Things to Explore at MacEwan University</h2>
+        <ul>
+            <li><strong>Clock Tower:</strong> A scenic spot to relax and enjoy the views.</li>
+            <li><strong>Flag Pole:</strong> Symbol of national pride.</li>
+            <li><strong>Sustainability Projects:</strong> Explore the university's sustainable campus initiatives.</li>
+            <li><strong>Indigenous Center:</strong> Learn more about the Indigenous culture and traditions.</li>
+            <li><strong>Sports Complex:</strong> A state-of-the-art sports facility for students.</li>
+            <li><strong>Art Gallery:</strong> Experience local art exhibits.</li>
+        </ul>
+    </section>
+    <div id="map" style="height: 500px;"></div>
+    <script>
+        var map = L.map('map').setView([53.5232, -113.5263], 13); // Coordinates for Edmonton
+    
+        // Add a tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    
+        // MacEwan University
+        L.marker([53.5232, -113.5263]).addTo(map)
+            .bindPopup("<b>MacEwan University</b><br>10700 104 Ave NW, Edmonton")
+            .openPopup();
+    
+        // West Edmonton Mall (shopping, entertainment)
+        L.marker([53.5501, -113.6250]).addTo(map)
+            .bindPopup("<b>West Edmonton Mall</b><br>8882 170 St NW, Edmonton");
+    
+        // Edmonton River Valley (scenic park)
+        L.marker([53.5356, -113.4991]).addTo(map)
+            .bindPopup("<b>Edmonton River Valley</b><br>Great for outdoor activities and views.");
+    
+        // Royal Alberta Museum
+        L.marker([53.5405, -113.4971]).addTo(map)
+            .bindPopup("<b>Royal Alberta Museum</b><br>12845 102 Ave NW, Edmonton");
+    
+        // University of Alberta Botanic Garden
+        L.marker([53.5051, -113.6091]).addTo(map)
+            .bindPopup("<b>University of Alberta Botanic Garden</b><br>51227 AB-60, Edmonton");
+    
+        // Edmonton Art Gallery
+        L.marker([53.5438, -113.4909]).addTo(map)
+            .bindPopup("<b>Edmonton Art Gallery</b><br>2 Sir Winston Churchill Square, Edmonton");
+    </script>
+    
+
+    <footer>
+        <p>&copy; 2024 MacEwan University Immigration Services</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
