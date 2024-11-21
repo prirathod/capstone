@@ -222,25 +222,50 @@ footer p:last-child {
         padding-top: 30px;
     }
 }
+/* Pre-Arrival Section Styles */
 #pre-arrival {
+    padding: 2rem;
     background-color: #f9f9f9;
-    padding: 20px;
 }
 
 #pre-arrival h2 {
-    color: #9a1313;
     text-align: center;
+    color: #004080;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
-#pre-arrival ul {
-    list-style: disc inside;
-    margin: 20px;
-    padding: 0;
+.pre-arrival-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#pre-arrival ul li {
-    margin-bottom: 10px;
-}#post-arrival {
+.requirement {
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.requirement img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #004080;
+}
+
+.requirement p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+#post-arrival {
     background-color: #eef7ff;
     padding: 20px;
 }
