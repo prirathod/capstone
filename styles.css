@@ -396,3 +396,29 @@ footer p:last-child {
         grid-template-columns: 1fr; /* 1 column for extra small screens */
     }
 }
+/* Accommodation Info */
+section.accommodation-info {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section.accommodation-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+section.accommodation-info ul li {
+    margin-bottom: 10px;
+}
+
+section.accommodation-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+section.accommodation-info a:hover {
+    text-decoration: underline;
+}
