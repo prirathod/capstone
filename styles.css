@@ -125,7 +125,6 @@ header .logo span {
     margin-bottom: 10px;
 }
 
-
 /* Container Styling */
 .container {
     max-width: 1200px;
@@ -267,6 +266,7 @@ footer p:last-child {
         padding-top: 30px;
     }
 }
+
 /* General Pre-Arrival Section */
 #pre-arrival {
     padding: 2rem;
@@ -396,29 +396,68 @@ footer p:last-child {
         grid-template-columns: 1fr; /* 1 column for extra small screens */
     }
 }
+
 /* Accommodation Info */
-section.accommodation-info {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
+#accommodation {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+#accommodation h2 {
+    text-align: center;
+    color: #004080;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid Items */
+.grid-item {
+    text-align: center;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    overflow: hidden;
 }
 
-section.accommodation-info ul {
-    list-style: none;
-    padding: 0;
+.grid-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #004080;
+    margin-bottom: 0.5rem;
 }
 
-section.accommodation-info ul li {
-    margin-bottom: 10px;
+.grid-item p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
 }
 
-section.accommodation-info a {
-    color: #007bff;
-    text-decoration: none;
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .grid-layout {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
 }
 
-section.accommodation-info a:hover {
-    text-decoration: underline;
+@media screen and (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid-layout {
+        grid-template-columns: 1fr; /* 1 column for extra small screens */
+    }
 }
