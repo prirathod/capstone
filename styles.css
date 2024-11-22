@@ -520,3 +520,42 @@ footer p:last-child {
         grid-template-columns: 1fr; /* 1 column for extra small screens */
     }
 }
+/*transportation styles*/
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+h2 {
+    color: #0071c5;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+a {
+    color: #0071c5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
