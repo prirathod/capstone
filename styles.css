@@ -367,8 +367,8 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background-color: #333;
-    padding: 10px 0;
+    background-color:#9C1C2C;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -398,7 +398,7 @@ body {
 
 /* Header Section */
 header {
-    background-color: #4CAF50;
+    background-color: #9C1C2C;
     padding: 20px 0;
     text-align: center;
 }
