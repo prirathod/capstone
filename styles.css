@@ -129,6 +129,11 @@ footer p:last-child {
     max-width: 800px;
     border-radius: 8px;
 }
+.intro-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 .intro-section h1 {
     color: #9C1C2C; /* Red color for heading */
