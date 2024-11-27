@@ -34,20 +34,20 @@
     
         // University boundary highlight (change coordinates accordingly for accuracy)
         var universityArea = L.polygon([
-            [53.5232, -113.5280], // Top-left corner
-            [53.5227, -113.5230], // Bottom-left corner
-            [53.5245, -113.5200], // Bottom-right corner
-            [53.5240, -113.5260]  // Top-right corner
+            [53.54721, -113.50375], // Top-left corner
+            [53.53986, -113.49234], // Bottom-left corner
+            [53.547586, -113.51114], // Bottom-right corner
+            [53.54704, -113.50244]  // Top-right corner
         ], {color: 'green', fillColor: '#9fdf9f', fillOpacity: 0.2}).addTo(map);
     
         // Places within the university with red markers
         var places = [
-            {lat: 53.5235, lon: -113.5265, name: "Clock Tower"},
-            {lat: 53.5240, lon: -113.5250, name: "Flag Pole"},
-            {lat: 53.5225, lon: -113.5240, name: "Sustainability Projects"},
-            {lat: 53.5230, lon: -113.5225, name: "Indigenous Center"},
-            {lat: 53.5232, lon: -113.5215, name: "Sports Complex"},
-            {lat: 53.5236, lon: -113.5230, name: "Art Gallery"}
+            {lat: 53.32490, lon: - 113.30153, name: "Clock Tower"},
+            {lat:53.54689, lon: -113.50408, name: "Flag Pole"},
+            {lat: 53.54686, lon: - 113.50561, name: "Sustainability Projects"},
+            {lat: 53.54670, lon: -113.51086, name: "Indigenous Center"},
+            {lat: 53.54723, lon: -113.50604, name: "Sports Complex"},
+            {lat: 53.54674, lon: - 113.51230, name: "Art Gallery"}
         ];
     
         // Add red markers for each place
@@ -76,7 +76,7 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
     
         // MacEwan University
-        L.marker([53.5232, -113.5263]).addTo(map)
+        L.marker([53.54724, -113.50633]).addTo(map)
             .bindPopup("<b>MacEwan University</b><br>10700 104 Ave NW, Edmonton")
             .openPopup();
     
