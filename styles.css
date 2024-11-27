@@ -257,7 +257,11 @@ footer p:last-child {
     margin: 10px 0;
 }
 
-
+.contact-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
